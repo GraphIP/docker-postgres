@@ -1,5 +1,5 @@
-FROM postgres:11
+FROM postgres:12
 
 LABEL maintainer="AIGIS Services Ltd"
 
-RUN apt-get update && apt-get install postgresql-11-ip4r -y
+RUN apt-get update && apt-get install postgresql-12-ip4r -y
