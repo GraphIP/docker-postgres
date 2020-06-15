@@ -1,4 +1,4 @@
-name: Publish GraphIP Postgres Image [1.0]
+name: Publish GraphIP Postgres Image [11]
 on: [push]
 jobs:
   build:
