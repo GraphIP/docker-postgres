@@ -2,6 +2,8 @@ FROM postgres:12
 
 LABEL maintainer="AIGIS Services Ltd"
 
+ARG MAXMIND_LICENSE_KEY
+
 RUN apt-get update && \
     apt-get install --no-install-recommends \
     ca-certificates \
