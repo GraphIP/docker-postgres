@@ -4,12 +4,16 @@ LABEL maintainer="AIGIS Services Ltd"
 
 ARG MAXMIND_LICENSE_KEY
 
-RUN apt-get update && \
-    apt-get install --no-install-recommends \
+RUN apt-get update \
+    && apt-get install --no-install-recommends \
     ca-certificates \
     wget \
     unzip \
+
+    # install ip4r
     postgresql-12-ip4r -y \
+
+    # download and unzip maxmind DB's
     && cd /tmp \
     && wget -nv -O GeoLite2-City-CSV.zip "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City-CSV&license_key=${MAXMIND_LICENSE_KEY}&suffix=zip" \
     && wget -nv -O GeoLite2-ASN-CSV.zip "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&license_key=${MAXMIND_LICENSE_KEY}&suffix=zip" \
@@ -20,4 +24,4 @@ RUN apt-get update && \
     && rm -rf /tmp/GeoLite2-ASN-CSV* \
     && rm -rf /tmp/GeoLite2-City-CSV* \
     && rm *.txt && ls -alh \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* /var/tmp/*

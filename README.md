@@ -1,4 +1,6 @@
-## Custom Postgres Docker Image for GraphIP DB
+## Postgres Docker Image
+
+Unmodified Postgres with some useful plugins. Provides required extensions for use within our stack.
 
 # Supported tags
 
