@@ -15,7 +15,8 @@ RUN apt-get update \
     && cd /tmp \
     && wget -nv -O GeoLite2-City-CSV.zip "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City-CSV&license_key=${MAXMIND_LICENSE_KEY}&suffix=zip" \
     && wget -nv -O GeoLite2-ASN-CSV.zip "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&license_key=${MAXMIND_LICENSE_KEY}&suffix=zip" \
-    && unzip GeoLite2-City-CSV.zip && unzip GeoLite2-ASN-CSV.zip \
+    && unzip GeoLite2-City-CSV.zip \
+    && unzip GeoLite2-ASN-CSV.zip \
     && cd /tmp/GeoLite2-City-CSV_* && mv * .. \
     && cd /tmp/GeoLite2-ASN-CSV_* && mv * .. \
     && cd .. \
