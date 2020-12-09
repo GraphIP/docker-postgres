@@ -14,4 +14,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         buildargs: MAXMIND_LICENSE_KEY
-        tags: "latest"
+        tags: "latest,13"
