@@ -5,6 +5,8 @@ Unmodified Postgres with some useful plugins. Provides required extensions for u
 ## Features
 
 - ✅ [IP4R](https://github.com/RhodiumToad/ip4r). A PostgreSQL extension supporting 6 data types allowing you to store IPv4 & IPv6 addresses in a PostgreSQL table.
+- ✅ [Maxmind GeoLite2 DB](https://dev.maxmind.com/geoip/geoip2/geolite2/). Maxmind's GeoLite2 City and ASN databases in CSV format ( available in the home (`~/`) directory ).
+
 
 # Supported tags
 
