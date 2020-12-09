@@ -9,10 +9,8 @@ RUN apt-get update \
     ca-certificates \
     wget \
     unzip \
-
     # install ip4r
     postgresql-12-ip4r -y \
-
     # download and unzip maxmind DB's
     && cd /tmp \
     && wget -nv -O GeoLite2-City-CSV.zip "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City-CSV&license_key=${MAXMIND_LICENSE_KEY}&suffix=zip" \
