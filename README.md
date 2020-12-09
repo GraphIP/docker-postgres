@@ -1,8 +1,14 @@
-## Custom Postgres Docker Image for GraphIP DB
+# Postgres Docker Image
+
+Unmodified Postgres with some useful plugins. Provides required extensions for use within our stack.
+
+## Features
+
+- ✅ [IP4R](https://github.com/RhodiumToad/ip4r). A PostgreSQL extension supporting 6 data types allowing you to store IPv4 & IPv6 addresses in a PostgreSQL table.
 
 # Supported tags
 
--   `11`, `12`, `latest`
+-   `11`, `12`, `13`, `latest (13)`
 
 # Quick reference
 
