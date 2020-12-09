@@ -8,7 +8,7 @@ Unmodified Postgres with some useful plugins. Provides required extensions for u
 
 # Supported tags
 
--   `11`, `12`, `latest`
+-   `11`, `12`, `13`, `latest (13)`
 
 # Quick reference
 
