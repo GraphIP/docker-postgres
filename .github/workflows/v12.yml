@@ -1,5 +1,8 @@
 name: Publish GraphIP Postgres Image [12]
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: '0 1 * * wed'  # every wednesday @ 01:00
 jobs:
   build:
     runs-on: ubuntu-latest
