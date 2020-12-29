@@ -1,0 +1,21 @@
+name: Publish GraphIP Postgres Image [11]
+on:
+  push:
+  schedule:
+    - cron: '20 1 * * wed'  # every wednesday @ 01:20
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 11
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      env:
+        MAXMIND_LICENSE_KEY: ${{ secrets.MAXMIND_LICENSE_KEY }}
+      with:
+        name: graphip/postgres
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildargs: MAXMIND_LICENSE_KEY
