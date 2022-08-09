@@ -1,6 +1,6 @@
 FROM postgres:12
 
-LABEL maintainer="AIGIS Services Ltd"
+LABEL maintainer="Lotus Labs Ltd"
 
 ARG MAXMIND_LICENSE_KEY
 
